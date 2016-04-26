@@ -5,6 +5,7 @@ Before you start your integration you will need the following.
 
 * Google Cloud Messaging API Key
 * Intilery API Key
+* Google Services JSON file
 
 ### Setting up your GCM Key
 1. Log into your [Google API Console](https://console.developers.google.com/)
@@ -30,6 +31,55 @@ Before you start your integration you will need the following.
 3. At the bottom of the page click the `Add Application` button, enter an application name (we will need this for later), select `Android Push Notifications` from the application type and click `add`.
 4. You will need to add your Google API Key to the application.
 5. Click on the `New Key` button to generate your Intilery API KEY and now you're ready to start the integration.
+
+### Google Services JSON file
+You will need a `google-services.json` file in the example folder which can be generated from the [Google Support Site](
+https://developers.google.com/cloud-messaging/android/client#get-config). The file should look something like this:
+```
+{
+  "project_info": {
+    "project_id": "PROJECT_ID",
+    "project_number": "PROJECT_NUMBER",
+    "name": "PROJECT_NAME"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "MOBILE_SDK_KEY_HERE",
+        "client_id": "android:com.intilery.android.example",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.intilery.android.example",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 2,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 1
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}
+```
 
 ### Adding the SDK Support to an application
 Go into your build.gradle and add the following to the list of dependencies
