@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Intilery SDK Example</string>
+    <string name="action_settings">Settings</string>
+    <string name="intilery_url_box">Enter Intilery URL</string>
+    <string name="intilery_token_box">Enter Intilery Token</string>
+    <string name="intilery_submit">Start Test App</string>
+    <string name="send_data">Send Data to Intilery Platform?</string>
+    <string name="title_activity_foo_bar_start">FooBarStart</string>
+</resources>

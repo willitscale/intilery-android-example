@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_startpage">
+
+
+    <EditText android:id="@+id/intilery_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/intilery_url_box"
+        android:inputType="textUri"
+        android:layout_row="0"
+        android:layout_column="0" />
+
+    <EditText android:id="@+id/intilery_token"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/intilery_token_box"
+        android:inputType="textVisiblePassword|textPassword"
+        android:layout_row="1"
+        android:layout_column="0" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intilery_submit"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:onClick="startFakeApp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send_data"
+        android:id="@+id/checkBox"
+        android:layout_row="2"
+        android:layout_column="0" />
+
+</GridLayout>
